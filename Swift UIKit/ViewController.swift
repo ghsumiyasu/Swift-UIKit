@@ -101,6 +101,11 @@ class ViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [humidityStackView, windStackView])
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = 3
+        stackView.backgroundColor = .lightGray
+        stackView.layer.cornerRadius = 10
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 12, leading: 24, bottom: 12, trailing: 24)
         return stackView
     }()
     override func viewDidLoad() {
