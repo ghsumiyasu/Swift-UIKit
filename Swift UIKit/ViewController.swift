@@ -9,6 +9,8 @@
 
 import UIKit
 
+// Mudando pela Quinta vez, agora com stash
+
 class ViewController: UIViewController {
     
     private lazy var backgroudView:UIImageView = {
