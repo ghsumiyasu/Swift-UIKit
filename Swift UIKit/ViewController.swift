@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     private func setHierarchy() {
         view.addSubview(customView)    }
     private func setConstraints() {
+        //Verificando o transito entre os commits
         NSLayoutConstraint.activate([
             customView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
             customView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
