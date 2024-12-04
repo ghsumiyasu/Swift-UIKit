@@ -9,20 +9,14 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
     static let myIndentifier: String = "myCollection"
-    //
+
     private var myLabel = UILabel()
     private var myImage = UIImageView()
-    
-    //private var myStackView = UIStackView(arrangedSubviews: [myLabel, myImage])
-    //
-    //
+    private var myStackView = UIStackView()
 
-    //
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = .green
-        //
-        //
         myLabel.translatesAutoresizingMaskIntoConstraints = false
         myLabel.text = "Label"
         myLabel.textColor = .magenta
@@ -32,10 +26,9 @@ class MyCollectionViewCell: UICollectionViewCell {
         myImage.image = UIImage(named: "myImage")
         myImage.contentMode = .scaleAspectFit
         //
-        let myStackView = UIStackView(arrangedSubviews: [myLabel, myImage])
+        myStackView = UIStackView(arrangedSubviews: [myLabel, myImage])
         myStackView.translatesAutoresizingMaskIntoConstraints = false
         myStackView.axis = .vertical
-        
         myStackView.spacing = 4
         myStackView.layer.borderWidth = 1
         myStackView.layer.borderColor = UIColor.yellow.cgColor
