@@ -18,8 +18,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
  //
  private var myLayout = UICollectionViewFlowLayout()
  //
- private var myLabel = UILabel()
- //
  override func viewDidLoad() {
      super.viewDidLoad()
  
@@ -35,11 +33,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
      myCollectionView.backgroundColor = .blue
      myCollectionView.dataSource = self
      myCollectionView.register(MyCollectionViewCell.self, forCellWithReuseIdentifier: MyCollectionViewCell.myIndentifier)
-     //
-     myLabel.translatesAutoresizingMaskIntoConstraints = false
-     myLabel.text = "My Label"
-     myLabel.textColor = .cyan
-     myLabel.font = UIFont.systemFont(ofSize: 10, weight: .semibold)
      //
      view.addSubview(myCollectionView)
  
